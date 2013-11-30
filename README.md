@@ -1,9 +1,12 @@
-android_device_lenovo_b8000
-===========================
+# android_device_lenovo_b8000 #
 
-Recovery/Fastboot: hold down both volume up and volume down while turning the power on
+## Device Info ##
 
-Update .ZIP: Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar 
+### Recovery/Fastboot ###
+Hold down both volume up and volume down while turning the power on
+
+### Update .ZIP ###
+Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
  * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
  * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
 
@@ -20,13 +23,13 @@ Work in progress...
  1. chmod a+x ~/bin/repo
 
  1. sudo apt-get install emacs23
- 1. emacs ~/.bashrc & 
-  export USE_CCACHE=1 
-  export PS1="[\t] \u@\h> " 
-  export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/ 
-  export PATH=$PATH:$JAVA_HOME/bin 
-  export PATH=$HOME/bin:$PATH 
-  export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin 
+ 1. emacs ~/.bashrc &
+    export USE_CCACHE=1
+    export PS1="[\t] \u@\h> "
+    export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
+    export PATH=$PATH:$JAVA_HOME/bin
+    export PATH=$HOME/bin:$PATH
+    export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
  1. Close and open a new Terminal
  1. Set up GitHub SSH keys
    1. https://help.github.com/articles/generating-ssh-keys
@@ -51,11 +54,14 @@ Work in progress...
 
  1. Wait several hours!
 
- 1. ...
+Uncharted Territory...
+The boot.img and recovery.img files in Lenovo's update .ZIP file [above] seem bad.  
+They extract with no errors using either unpackbootimg or split_bootimg.pl.  
+However, gunzip does not like the boot.img-ramdisk.gz or recovery.img-ramdisk.gz file.  
+I need to figure out how to decompress and cpio those files:  
+http://www.imajeenyus.com/computer/20130301_android_tablet/android/unpack_repack_recovery_image.html
 
-Uncharted Territory:
-The boot.img file in Lenovo's update .ZIP file [above] is bad. 
-It has a boot.img-ramdisk.gz file in it that actually uncompressed. 
+Maybe...
 We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
  1. Download split_bootimg.pl https://gist.github.com/jberkel/1087743
  1. Extract boot.img from Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
@@ -63,6 +69,7 @@ We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
  1. mv boot.img-ramdisk.gz boot.img-ramdisk
  1. mkbootimg --kernel boot.img-kernel --ramdisk boot.img-ramdisk -o boot.img
 
+Back on track...
 build/tools/device/mkvendor.sh lenovo b8000 boot.img
 
 
