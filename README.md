@@ -9,7 +9,7 @@ Update .ZIP: Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
 
 Work in progress...
 
- 1. Install 64-bit Ubuntu on a VM (2GB RAM, 64GB Disk) 
+ 1. Install 64-bit Ubuntu on a VM (2GB RAM, 64GB Disk)
  1. sudo apt-get update
  1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-6-jdk openjdk-6-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
  1. sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
@@ -54,9 +54,9 @@ Work in progress...
  1. ...
 
 Uncharted Territory:
-The boot.img file in Lenovo's update .ZIP file [above] is bad.
-It has a boot.img-ramdisk.gz file in it that actually uncompressed.
-We need to recreate the boot.img file with the file renamed to boot.img-ramdisk
+The boot.img file in Lenovo's update .ZIP file [above] is bad. 
+It has a boot.img-ramdisk.gz file in it that actually uncompressed. 
+We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
  1. Download split_bootimg.pl https://gist.github.com/jberkel/1087743
  1. Extract boot.img from Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
  1. split_bootimg.pl boot.img
@@ -67,34 +67,34 @@ build/tools/device/mkvendor.sh lenovo b8000 boot.img
 
 
 Desperation:
-adb pull /system/build.prop
-ro.product.manufacturer=LENOVO
-ro.product.device=B8000
-ro.product.board=blade10_row_wifi
+adb pull /system/build.prop 
+ro.product.manufacturer=LENOVO 
+ro.product.device=B8000 
+ro.product.board=blade10_row_wifi 
 
 Other References:
-Using my old Galaxy Epic and LGOG as a guide:
+Using my old Galaxy Epic and LGOG as a guide: 
 http://wiki.cyanogenmod.org/w/Build_for_epicmtd
-http://wiki.cyanogenmod.org/w/Build_for_ls970
-http://source.android.com/source/initializing.html
+http://wiki.cyanogenmod.org/w/Build_for_ls970 
+http://source.android.com/source/initializing.html 
 
-Lenovo Yoga 8/10 Tablet Open Source Code:
-http://mobilesupport.lenovo.com/en-us/products/yoga_tablet_10
-http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part1.zip
-http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip
-http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part3.zip
-Weird packaging:
-	part1
-		mediatek
-			build
-			config
-			custom
-			kernel
-			platform
-	part2
-		kernel
-	part3
-		bionic
-		bootable
-		external
+Lenovo Yoga 8/10 Tablet Open Source Code: 
+http://mobilesupport.lenovo.com/en-us/products/yoga_tablet_10 
+http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part1.zip 
+http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip 
+http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part3.zip 
+Weird packaging: 
+	part1 
+		mediatek 
+			build 
+			config 
+			custom 
+			kernel 
+			platform 
+	part2 
+		kernel 
+	part3 
+		bionic 
+		bootable 
+		external 
 
