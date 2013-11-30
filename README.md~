@@ -3,8 +3,7 @@ android_device_lenovo_b8000
 
 Recovery/Fastboot: hold down both volume up and volume down while turning the power on
 
-Update .ZIP: Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
-  http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
+Update .ZIP: http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
   Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
 
 Work in progress...
@@ -56,12 +55,6 @@ Uncharted Territory:
 The boot.img file in Lenovo's update .ZIP file [above] is bad.
 It has a boot.img-ramdisk.gz file in it that actually uncompressed.
 We need to recreate the boot.img file with the file renamed to boot.img-ramdisk
- 1. Download split_bootimg.pl https://gist.github.com/jberkel/1087743
- 1. Extract boot.img from Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
- 1. split_bootimg.pl boot.img
- 1. mv boot.img-ramdisk.gz boot.img-ramdisk
- 1. mkbootimg --kernel boot.img-kernel --ramdisk boot.img-ramdisk -o boot.img
-
 
 
 Desperation:
