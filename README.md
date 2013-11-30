@@ -90,8 +90,10 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
 
 Other References:
  * Using my old Galaxy Epic and LGOG as a guide:
-   * http://wiki.cyanogenmod.org/w/Build_for_epicmt 
+   * http://wiki.cyanogenmod.org/w/Build_for_epicmt
+     * https://github.com/cyanogenmod/android_device_samsung_epicmtd
    * http://wiki.cyanogenmod.org/w/Build_for_ls970
+     * https://github.com/cyanogenmod/android_device_lge_ls970
  * http://source.android.com/source/initializing.html
  * boot/recovery info:
    * http://forum.xda-developers.com/showthread.php?t=443994
