@@ -1,4 +1,4 @@
-# android_device_lenovo_b8000 #
+# Lenovo Yoga IdeaPad B8000 (Tablet 10) #
 
 ## Device Info ##
 
@@ -10,8 +10,7 @@ Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:
  * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
  * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
 
-Work in progress...
-
+## Work in progress... ##
  1. Install 64-bit Ubuntu on a VM (2GB RAM, 64GB Disk)
  1. sudo apt-get update
  1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-6-jdk openjdk-6-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
