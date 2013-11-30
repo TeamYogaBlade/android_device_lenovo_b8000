@@ -40,27 +40,23 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
    1. GitHub->SSH Keys->Add->Paste
    1. ssh -T git@github.com
  1. git config --global user.email "pv@swooby.com"
- 1. git config --global user.name "Paul Peavyhouse"
-
+ 1. git config --global user.name "Paul Peavyhouse"  
  1. mkdir -p ~/android/system
  1. cd ~/android/system/
  1. repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
- 1. repo sync
+ 1. repo sync  
+ 1. Wait several hours!  
+ 1. make -j4 otatools  
+ 1. Wait several hours!  
 
- 1. Wait several hours!
-
- 1. make -j4 otatools
-
- 1. Wait several hours!
-
-Uncharted Territory...
+Uncharted Territory...  
 The boot.img and recovery.img files in Lenovo's update .ZIP file [above] seem bad.  
 They extract with no errors using either unpackbootimg or split_bootimg.pl.  
 However, gunzip does not like the boot.img-ramdisk.gz or recovery.img-ramdisk.gz file.  
 I need to figure out how to decompress and cpio those files:  
-http://www.imajeenyus.com/computer/20130301_android_tablet/android/unpack_repack_recovery_image.html
+http://www.imajeenyus.com/computer/20130301_android_tablet/android/unpack_repack_recovery_image.html  
 
-Maybe...
+Maybe...  
 We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
  1. Download split_bootimg.pl https://gist.github.com/jberkel/1087743
  1. Extract boot.img from Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
@@ -68,7 +64,7 @@ We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
  1. mv boot.img-ramdisk.gz boot.img-ramdisk
  1. mkbootimg --kernel boot.img-kernel --ramdisk boot.img-ramdisk -o boot.img
 
-Back on track...
+Back on track...  
 build/tools/device/mkvendor.sh lenovo b8000 boot.img
 
 
@@ -84,23 +80,25 @@ http://wiki.cyanogenmod.org/w/Build_for_epicmtd
 http://wiki.cyanogenmod.org/w/Build_for_ls970 
 http://source.android.com/source/initializing.html 
 
-Lenovo Yoga 8/10 Tablet Open Source Code: 
-http://mobilesupport.lenovo.com/en-us/products/yoga_tablet_10 
-http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part1.zip 
-http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip 
-http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part3.zip 
-Weird packaging: 
-	part1 
-		mediatek 
-			build 
-			config 
-			custom 
-			kernel 
-			platform 
-	part2 
-		kernel 
-	part3 
-		bionic 
-		bootable 
-		external 
+Lenovo Yoga 8/10 Tablet Open Source Code:  
+http://mobilesupport.lenovo.com/en-us/products/yoga_tablet_10  
+http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part1.zip  
+http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip  
+http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part3.zip  
+Weird packaging:
+<pre>
+    part1 
+        mediatek 
+            build 
+            config 
+            custom 
+            kernel 
+            platform
+    part2 
+        kernel 
+    part3 
+        bionic 
+        bootable 
+        external 
+</pre>
 
