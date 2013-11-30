@@ -3,54 +3,55 @@ android_device_lenovo_b8000
 
 Recovery/Fastboot: hold down both volume up and volume down while turning the power on
 
-Update .ZIP: Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
-  http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
-  Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
+Update .ZIP: Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar 
+ * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
+ * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
 
 Work in progress...
 
-Install 64-bit Ubuntu on a VM (2GB RAM, 64GB Disk) 
-sudo apt-get update
-sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-6-jdk openjdk-6-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
-sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
-sudo apt-get install android-tools-adb android-tools-fastboot
+ 1. Install 64-bit Ubuntu on a VM (2GB RAM, 64GB Disk) 
+ 1. sudo apt-get update
+ 1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-6-jdk openjdk-6-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
+ 1. sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
+ 1. sudo apt-get install android-tools-adb android-tools-fastboot
 
-mkdir -p ~/bin
-curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-chmod a+x ~/bin/repo
+ 1. mkdir -p ~/bin
+ 1. curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+ 1. chmod a+x ~/bin/repo
 
-sudo apt-get install emacs23
-emacs ~/.bashrc &
-  export USE_CCACHE=1
-  export PS1="[\t] \u@\h> "
-  export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
-  export PATH=$PATH:$JAVA_HOME/bin
-  export PATH=$HOME/bin:$PATH
-  export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
+ 1. sudo apt-get install emacs23
+ 1. emacs ~/.bashrc & 
+  export USE_CCACHE=1 
+  export PS1="[\t] \u@\h> " 
+  export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/ 
+  export PATH=$PATH:$JAVA_HOME/bin 
+  export PATH=$HOME/bin:$PATH 
+  export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin 
+ 1. Close and open a new Terminal
+ 1. Set up GitHub SSH keys
+   1. https://help.github.com/articles/generating-ssh-keys
+   1. ssh-keygen -t rsa -C "pv@swooby.com"
+   1. cd ~/.ssh
+   1. ssh-add id_rsa
+   1. sudo apt-get install xclip
+   1. xclip -sel clip < ~/.ssh/id_rsa.pub
+   1. GitHub->SSH Keys->Add->Paste
+   1. ssh -T git@github.com
+ 1. git config --global user.email "pv@swooby.com"
+ 1. git config --global user.name "Paul Peavyhouse"
 
-Close and open a new Terminal
+ 1. mkdir -p ~/android/system
+ 1. cd ~/android/system/
+ 1. repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+ 1. repo sync
 
-Set up GitHub SSH keys
-  https://help.github.com/articles/generating-ssh-keys
-  ssh-keygen -t rsa -C "pv@swooby.com"
-  cd ~/.ssh
-  ssh-add id_rsa
-  sudo apt-get install xclip
-  xclip -sel clip < ~/.ssh/id_rsa.pub
-  GitHub->SSH Keys->Add->Paste
-  ssh -T git@github.com
+ 1. Wait several hours!
 
-git config --global user.email "pv@swooby.com"
-git config --global user.name "Paul Peavyhouse"
+ 1. make -j4 otatools
 
-mkdir -p ~/android/system
-cd ~/android/system/
-repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
-repo sync
+ 1. Wait several hours!
 
-Wait several hours!
-
-make -j4 otatools
+ 1. ...
 
 Uncharted Territory:
 The boot.img file in Lenovo's update .ZIP file [above] is bad.
