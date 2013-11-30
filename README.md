@@ -1,14 +1,21 @@
 # Lenovo Yoga IdeaPad B8000 (Tablet 10) #
 
 ## Device Info ##
-
-### Recovery/Fastboot ###
-Hold down both volume up and volume down while turning the power on
-
-### Update .ZIP ###
-Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
- * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
- * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
+ * Recovery/Fastboot:  
+   Hold down both volume up and volume down while turning the power on
+ * Update .ZIP:  
+   Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
+   * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
+   * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
+  * adb pull /system/build.prop
+<pre>
+ro.product.manufacturer=LENOVO
+ro.product.device=B8000
+ro.product.board=blade10_row_wifi
+</pre>
+  * Processor: 1.2GHz MediaTek MT8125 quad-core  
+    REQUIRES SPECIAL BOOT.IMG/RECOVERY.IMG UNPACK AND PACK TOOLS!  
+    http://forum.xda-developers.com/showthread.php?t=1587411
 
 ## Work in progress... ##
  1. Install 64-bit Ubuntu on a VM (2GB RAM, 64GB Disk)
@@ -53,10 +60,17 @@ Uncharted Territory...
 The boot.img and recovery.img files in Lenovo's update .ZIP file [above] seem bad.  
 They extract with no errors using either unpackbootimg or split_bootimg.pl.  
 However, gunzip does not like the boot.img-ramdisk.gz or recovery.img-ramdisk.gz file.  
-I need to figure out how to decompress and cpio those files:  
+We need to figure out how to decompress and cpio those files:  
 http://www.imajeenyus.com/computer/20130301_android_tablet/android/unpack_repack_recovery_image.html  
 
 Maybe...  
+http://en.wikipedia.org/wiki/Gzip#File_format  
+"gzip" is often also used to refer to the gzip file format, which is:
+ * a 10-byte header, containing a magic number (1f 8b), a version number and a timestamp
+ * optional extra headers, such as the original file name,
+ * a body, containing a DEFLATE-compressed payload
+ * an 8-byte footer, containing a CRC-32 checksum and the length of the original uncompressed data.
+
 recovery.img-ramdisk.gz starts with:
 <pre>
                         R  E  C  O  V  E  R  Y
@@ -72,6 +86,24 @@ byte 40: FF ...
 byte 512: 1F 8B 08 00 00 00 00 00 00 03 EC BD 0D 7C 54 C5 D5 38
 </pre>
 
+Which is interesting, because recovery.img-zImage starts with:
+<pre>
+                        K  E  R  N  E  L
+88 16 88 58 28 72 40 00 4B 45 52 4E 45 4C 00 ...
+byte 40: FF ...
+byte 512: 00 00 A0 E1 00 00 A0 E1 00 00 A0 E1 ...
+</pre>
+and boot.img-zImage starts with:
+<pre>
+                        K  E  R  N  E  L
+88 16 88 58 28 72 40 00 4B 45 52 4E 45 4C 00 ...
+byte 40: FF ...
+byte 512: 00 00 A0 E1 00 00 A0 E1 00 00 A0 E1 ...
+</pre>
+
+That tells me that the .gz files are not compressed!
+
+
 We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
  1. Download split_bootimg.pl https://gist.github.com/jberkel/1087743
  1. Extract boot.img from Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
@@ -83,17 +115,12 @@ Back on track...
 build/tools/device/mkvendor.sh lenovo b8000 boot.img
 
 
-Desperation:
-adb pull /system/build.prop 
-ro.product.manufacturer=LENOVO 
-ro.product.device=B8000 
-ro.product.board=blade10_row_wifi 
-
 Other References:
-Using my old Galaxy Epic and LGOG as a guide: 
-http://wiki.cyanogenmod.org/w/Build_for_epicmtd
-http://wiki.cyanogenmod.org/w/Build_for_ls970 
-http://source.android.com/source/initializing.html 
+Using my old Galaxy Epic and LGOG as a guide:  
+http://wiki.cyanogenmod.org/w/Build_for_epicmtd  
+http://wiki.cyanogenmod.org/w/Build_for_ls970  
+http://source.android.com/source/initializing.html  
+http://forum.xda-developers.com/showthread.php?t=443994  
 
 Lenovo Yoga 8/10 Tablet Open Source Code:  
 http://mobilesupport.lenovo.com/en-us/products/yoga_tablet_10  
