@@ -13,7 +13,7 @@ ro.product.manufacturer=LENOVO
 ro.product.device=B8000
 ro.product.board=blade10_row_wifi
 </pre>
-  * Processor: 1.2GHz MediaTek MT8125 quad-core  
+  * Processor: MediaTek MT8125 1.2GHz Quad-Core  
     REQUIRES SPECIAL BOOT.IMG/RECOVERY.IMG UNPACK AND PACK TOOLS!  
     http://forum.xda-developers.com/showthread.php?t=1587411
 
