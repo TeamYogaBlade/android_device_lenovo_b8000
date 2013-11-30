@@ -2,7 +2,7 @@
 
 ## Device Info ##
  * Recovery/Fastboot:  
-   Hold down both volume up and volume down while turning the power on
+   Hold down both Volume-Up and Volume-Down while turning the power on
  * Update .ZIP:  
    Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
    * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
@@ -30,7 +30,7 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
    * The first 512 bytes of the kernel files might also need to be removed.
 
 ## Work in progress... ##
- 1. Install 64-bit Ubuntu on a VM (2GB RAM, 64GB Disk)
+ 1. Install 64-bit Ubuntu on a VM (4GB RAM, 64GB Disk)
  1. sudo apt-get update
  1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-6-jdk openjdk-6-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
  1. sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
@@ -38,8 +38,7 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
  1. mkdir -p ~/bin
  1. curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
  1. chmod a+x ~/bin/repo
- 1. sudo apt-get install emacs23
- 1. emacs ~/.bashrc &
+ 1. gedit ~/.bashrc &
 <pre>
 export USE_CCACHE=1
 export PS1="[\t] \u@\h> "
@@ -75,17 +74,17 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
       BOOTIMAGE=$3  
       SKIP=$4  
    1. Change:  
-      pushd ramdisk > /dev/null
-      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
-      -to-
-      pushd ramdisk > /dev/null
-      if [ ! -z "$SKIP" ]
-      then
-        # Definitely discard the first $SKIP bytes
-        mv ../$BOOTIMAGEFILE-ramdisk.gz ../$BOOTIMAGEFILE-ramdisk-raw.gz
-        dd bs=$SKIP skip=1 if=../$BOOTIMAGEFILE-ramdisk-raw.gz of=../$BOOTIMAGEFILE-ramdisk.gz
-      fi
-      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
+      pushd ramdisk > /dev/null  
+      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i  
+      -to-  
+      pushd ramdisk > /dev/null  
+      if [ ! -z "$SKIP" ]  
+      then  
+        # Definitely discard the first $SKIP bytes  
+        mv ../$BOOTIMAGEFILE-ramdisk.gz ../$BOOTIMAGEFILE-ramdisk-raw.gz  
+        dd bs=$SKIP skip=1 if=../$BOOTIMAGEFILE-ramdisk-raw.gz of=../$BOOTIMAGEFILE-ramdisk.gz  
+      fi  
+      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i  
    1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
 
 
