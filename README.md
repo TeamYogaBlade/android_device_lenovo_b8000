@@ -101,7 +101,7 @@ byte 40: FF ...
 byte 512: 00 00 A0 E1 00 00 A0 E1 00 00 A0 E1 ...
 </pre>
 
-That tells me that the .gz files are not compressed!
+That tells me that first 512 bytes of the .gz files can be ignored.
 
 
 We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
