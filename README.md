@@ -106,6 +106,7 @@ Lenovo Yoga 8/10 Tablet Open Source Code:
    * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part1.zip
    * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip
    * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part3.zip
+
 Weird packaging:
    * part1
      * mediatek
