@@ -62,6 +62,7 @@ We need to recreate the boot.img file with the file renamed to boot.img-ramdisk
  1. mv boot.img-ramdisk.gz boot.img-ramdisk
  1. mkbootimg --kernel boot.img-kernel --ramdisk boot.img-ramdisk -o boot.img
 
+build/tools/device/mkvendor.sh lenovo b8000 boot.img
 
 
 Desperation:
