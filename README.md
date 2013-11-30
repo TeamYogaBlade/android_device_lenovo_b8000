@@ -57,6 +57,21 @@ I need to figure out how to decompress and cpio those files:
 http://www.imajeenyus.com/computer/20130301_android_tablet/android/unpack_repack_recovery_image.html  
 
 Maybe...  
+recovery.img-ramdisk.gz starts with:
+<pre>
+                        R  E  C  O  V  E  R  Y
+88 16 88 58 A6 7A 11 00 52 45 43 4F 56 45 52 59 00 ...
+byte 40: FF ...
+byte 512: 1F 8B 08 00 00 00 00 00 00 03 EC BD 0B 7C 54 D5 B5 30
+</pre>
+boot.img-ramdisk.gz starts with:
+<pre>
+                        R  O  O  T  F  S
+88 16 88 58 3C 2B 0A 00 52 4F 4F 54 46 53 00 ...
+byte 40: FF ...
+byte 512: 1F 8B 08 00 00 00 00 00 00 03 EC BD 0D 7C 54 C5 D5 38
+</pre>
+
 We need to recreate the boot.img file with the file renamed to boot.img-ramdisk:
  1. Download split_bootimg.pl https://gist.github.com/jberkel/1087743
  1. Extract boot.img from Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar
