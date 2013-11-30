@@ -15,20 +15,20 @@ Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:
  1. sudo apt-get update
  1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-6-jdk openjdk-6-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
  1. sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
- 1. sudo apt-get install android-tools-adb android-tools-fastboot
-
+ 1. sudo apt-get install android-tools-adb android-tools-fastboot  
  1. mkdir -p ~/bin
  1. curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
- 1. chmod a+x ~/bin/repo
-
+ 1. chmod a+x ~/bin/repo  
  1. sudo apt-get install emacs23
  1. emacs ~/.bashrc &
-    export USE_CCACHE=1
-    export PS1="[\t] \u@\h> "
-    export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
-    export PATH=$PATH:$JAVA_HOME/bin
-    export PATH=$HOME/bin:$PATH
-    export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
+<pre>
+export USE_CCACHE=1
+export PS1="[\t] \u@\h> "
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$HOME/bin:$PATH
+export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
+</pre>
  1. Close and open a new Terminal
  1. Set up GitHub SSH keys
    1. https://help.github.com/articles/generating-ssh-keys
