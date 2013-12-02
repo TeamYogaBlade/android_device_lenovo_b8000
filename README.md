@@ -4,6 +4,10 @@
  * Recovery/Fastboot:  
    Hold down both Volume-Up and Volume-Down while turning the power on
  * Tools
+   * MediaTek: http://mtk2000.ucoz.ru/load
+     * Drivers: http://mtk2000.ucoz.ru/load/drajvera/1
+     * Software: http://mtk2000.ucoz.ru/load/soft/4
+     * 
    * MTK Droid Root & Tools (MDRT) (Windows Only):
      * http://forum.xda-developers.com/showthread.php?t=2160490
      * Windows Driver:
@@ -11,7 +15,7 @@
        * Open Windows Explorer to CD-ROM
        * Install LenovoUsbDriver_autorun_1.0.8.exe
    * SmartPhone Flash Tool (SPFT) (Windows Only):
-     * http://forum.xda-developers.com/showthread.php?t=1982576
+     * v3.1316.0.150 (build.16-04-2013) http://forum.xda-developers.com/showthread.php?p=44078599
      * http://forum.xda-developers.com/showthread.php?t=1982587
    * MTKRomStudio?
  * Update .ZIP:  
