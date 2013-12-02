@@ -19,7 +19,7 @@ ro.product.manufacturer=LENOVO
 ro.product.device=B8000
 ro.product.board=blade10_row_wifi
 </pre>
- * Processor: MediaTek MT8125 1.2GHz Quad-Core
+ * Processor: MediaTek MT8125 (or MT8389) 1.2GHz Quad-Core
    * NOTE: MediaTek packs their boot.img and recovery.img a little differently.  
      Specifically the *-ramdisk.gz files have a 512 byte header that needs to be removed.  
      Something like the following needs to be done:
@@ -34,6 +34,14 @@ dd bs=512 skip=1 if=../recovery.img-ramdisk-raw.gz of=../recovery.img-ramdisk.gz
 gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 </pre>
    * The first 512 bytes of the kernel files might also need to be removed.
+ * Devices with the same processor (* = unconfirmed):
+   * Lenovo Yoga B8000 (10") Tablet
+   * Lenovo Yoga B6000 (8") Tablet
+   * Lenovo S6000 Tablet
+   * Lenovo S5000 Tablet
+   * Lenovo A3000 Tablet
+   * Asus MemoPad HD7
+   * GoClever Aries 785 (MT8389)
 
 ## Work in progress... ##
  1. Install 64-bit Ubuntu on a VM (4GB RAM, 64GB Disk)
