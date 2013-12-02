@@ -7,7 +7,6 @@
    * MediaTek: http://mtk2000.ucoz.ru/load
      * Drivers: http://mtk2000.ucoz.ru/load/drajvera/1
      * Software: http://mtk2000.ucoz.ru/load/soft/4
-     * 
    * MTK Droid Root & Tools (MDRT) (Windows Only):
      * http://forum.xda-developers.com/showthread.php?t=2160490
      * Windows Driver:
