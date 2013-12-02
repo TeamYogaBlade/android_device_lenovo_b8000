@@ -35,11 +35,12 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 </pre>
    * The first 512 bytes of the kernel files might also need to be removed.
  * Devices with the same processor (* = unconfirmed):
-   * Lenovo Yoga B8000 (10") Tablet
-   * Lenovo Yoga B6000 (8") Tablet
-   * Lenovo S6000 Tablet
-   * Lenovo S5000 Tablet
-   * Lenovo A3000 Tablet
+   * Lenovo Yoga B8000 (10")
+   * Lenovo Yoga B6000 (8")
+   * Lenovo S6000
+   * Lenovo S5000
+   * Lenovo A3000
+   * Lenovo A2107A
    * Asus MemoPad HD7
    * GoClever Aries 785 (MT8389)
 
