@@ -15,7 +15,7 @@
        * Open Windows Explorer to CD-ROM
        * Install LenovoUsbDriver_autorun_1.0.8.exe
    * SmartPhone Flash Tool (SPFT) (Windows Only):
-     * v3.1316.0.150 (build.16-04-2013) http://forum.xda-developers.com/showthread.php?p=44078599
+     * v3.1320.0.175 http://mtk2000.ucoz.ru/load/soft/soft_mtk/sp_flash_tool_src/5-1-0-151
      * http://forum.xda-developers.com/showthread.php?t=1982587
    * MTKRomStudio?
  * Update .ZIP:  
