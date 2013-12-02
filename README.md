@@ -13,6 +13,11 @@
        * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
        * Open Windows Explorer to CD-ROM
        * Install LenovoUsbDriver_autorun_1.0.8.exe
+     * Tutorials:
+       * How To Root: http://forum.xda-developers.com/showpost.php?p=38337401&postcount=5
+       * Problem Solving: http://forum.xda-developers.com/showpost.php?p=38369102&postcount=11
+       * Backup and Flash: http://forum.xda-developers.com/showpost.php?p=44509214&postcount=407
+       * Install ClockWorkMod Recovery: http://forum.xda-developers.com/showpost.php?p=44660171&postcount=417
    * SmartPhone Flash Tool (SPFT) (Windows Only):
      * Latest: v3.1328.0.sn183 http://www.google.com/webhp?q=SP+Flash+Tool
      * Tutorial: http://forum.xda-developers.com/showthread.php?t=1982587
