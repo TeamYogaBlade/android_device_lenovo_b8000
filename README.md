@@ -14,9 +14,9 @@
        * Open Windows Explorer to CD-ROM
        * Install LenovoUsbDriver_autorun_1.0.8.exe
    * SmartPhone Flash Tool (SPFT) (Windows Only):
-     * Source Code (C/C++): v3.1320.0.175 http://mtk2000.ucoz.ru/load/soft/soft_mtk/sp_flash_tool_src/5-1-0-151
+     * Latest: v3.1328.0.sn183 http://www.google.com/webhp?q=SP+Flash+Tool
      * Tutorial: http://forum.xda-developers.com/showthread.php?t=1982587
-     * Latest: v3.1328.0.sn183 https://www.google.com/webhp?q=SP+Flash+Tool
+     * Source Code (C/C++): v3.1320.0.175 http://mtk2000.ucoz.ru/load/soft/soft_mtk/sp_flash_tool_src/5-1-0-151
    * MTKRomStudio?
  * Update .ZIP:  
    Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
