@@ -1,43 +1,42 @@
 # Lenovo Yoga IdeaPad B8000 (Tablet 10) #
 
 ## Device Info ##
- * Recovery/Fastboot:  
-   Hold down both Volume-Up and Volume-Down while turning the power on
- * Tools
-   * MediaTek: http://mtk2000.ucoz.ru/load
-     * Drivers: http://mtk2000.ucoz.ru/load/drajvera/1
-     * Software: http://mtk2000.ucoz.ru/load/soft/4
-   * MTK Droid Root & Tools (MDRT) (Windows Only):
-     * http://forum.xda-developers.com/showthread.php?t=2160490
-     * Windows Driver:
-       * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
-       * Open Windows Explorer to CD-ROM
-       * Install LenovoUsbDriver_autorun_1.0.8.exe
-     * Tutorials:
-       * How To Root: http://forum.xda-developers.com/showpost.php?p=38337401&postcount=5
-       * Problem Solving: http://forum.xda-developers.com/showpost.php?p=38369102&postcount=11
-       * Backup and Flash: http://forum.xda-developers.com/showpost.php?p=44509214&postcount=407
-       * Install ClockWorkMod Recovery: http://forum.xda-developers.com/showpost.php?p=44660171&postcount=417
-       * 
-   * SmartPhone Flash Tool (SPFT) (Windows Only):
-     * Latest: v3.1328.0.sn183 http://www.google.com/webhp?q=SP+Flash+Tool
-     * Tutorial: http://forum.xda-developers.com/showthread.php?t=1982587
-     * Source Code (C/C++): v3.1320.0.175 http://mtk2000.ucoz.ru/load/soft/soft_mtk/sp_flash_tool_src/5-1-0-151
-   * MTKRomStudio?
- * Update .ZIP:  
-   Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
-   * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
-   * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
- * adb pull /system/build.prop
+* Recovery/Fastboot:  
+  Hold down both Volume-Up and Volume-Down while turning the power on
+* Tools
+  * MediaTek: http://mtk2000.ucoz.ru/load
+    * Drivers: http://mtk2000.ucoz.ru/load/drajvera/1
+    * Software: http://mtk2000.ucoz.ru/load/soft/4
+  * MTK Droid Root & Tools (MDRT) (Windows Only):
+    * http://forum.xda-developers.com/showthread.php?t=2160490
+    * Windows Driver:
+      * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
+      * Open Windows Explorer to CD-ROM
+      * Install LenovoUsbDriver_autorun_1.0.8.exe
+    * Tutorials:
+      * How To Root: http://forum.xda-developers.com/showpost.php?p=38337401&postcount=5
+      * Problem Solving: http://forum.xda-developers.com/showpost.php?p=38369102&postcount=11
+      * Backup and Flash: http://forum.xda-developers.com/showpost.php?p=44509214&postcount=407
+      * Install ClockWorkMod Recovery: http://forum.xda-developers.com/showpost.php?p=44660171&postcount=417
+  * SmartPhone Flash Tool (SPFT) (Windows Only):
+    * Latest: v3.1328.0.sn183 http://www.google.com/webhp?q=SP+Flash+Tool
+    * Tutorial: http://forum.xda-developers.com/showthread.php?t=1982587
+   * Source Code (C/C++): v3.1320.0.175 http://mtk2000.ucoz.ru/load/soft/soft_mtk/sp_flash_tool_src/5-1-0-151
+  * MTKRomStudio?
+* Update .ZIP:  
+  Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
+  * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
+  * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
+  * adb pull /system/build.prop
 <pre>
-ro.product.manufacturer=LENOVO
-ro.product.device=B8000
-ro.product.board=blade10_row_wifi
+        ro.product.manufacturer=LENOVO
+        ro.product.device=B8000
+        ro.product.board=blade10_row_wifi
 </pre>
- * Processor: MediaTek MT8125 (or MT8389) 1.2GHz Quad-Core
-   * NOTE: MediaTek packs their boot.img and recovery.img a little differently.  
-     Specifically the *-ramdisk.gz files have a 512 byte header that needs to be removed.  
-     Something like the following needs to be done:
+* Processor: MediaTek MT8125 (or MT8389) 1.2GHz Quad-Core
+  * NOTE: MediaTek packs their boot.img and recovery.img a little differently.  
+    Specifically the *-ramdisk.gz files have a 512 byte header that needs to be removed.  
+    Something like the following needs to be done:
 <pre>
 mkdir recovery
 cp Yoga_tablet_10_A422_000_040_131023_WW_WIFI/target_bin/target_bin/recovery.img .
@@ -48,16 +47,16 @@ mv ../recovery.img-ramdisk.gz ../recovery.img-ramdisk-raw.gz
 dd bs=512 skip=1 if=../recovery.img-ramdisk-raw.gz of=../recovery.img-ramdisk.gz
 gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 </pre>
-   * The first 512 bytes of the kernel files might also need to be removed.
- * Devices with the same processor (* = unconfirmed):
-   * Lenovo Yoga B8000 (10")
-   * Lenovo Yoga B6000 (8")
-   * Lenovo S6000
-   * Lenovo S5000
-   * Lenovo A3000
-   * Lenovo A2107A
-   * Asus MemoPad HD7
-   * GoClever Aries 785 (MT8389)
+  * The first 512 bytes of the kernel files might also need to be removed.
+* Devices with the same processor (* = unconfirmed):
+  * Lenovo Yoga B8000 (10")
+  * Lenovo Yoga B6000 (8")
+  * Lenovo S6000
+  * Lenovo S5000
+  * Lenovo A3000
+  * Lenovo A2107A
+  * Asus MemoPad HD7
+  * GoClever Aries 785 (MT8389)
 
 ## Work in progress... ##
  1. Install 64-bit Ubuntu on a VM (4GB RAM, 64GB Disk)
