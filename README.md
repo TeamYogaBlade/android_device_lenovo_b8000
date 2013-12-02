@@ -3,6 +3,12 @@
 ## Device Info ##
  * Recovery/Fastboot:  
    Hold down both Volume-Up and Volume-Down while turning the power on
+ * MTK Droid Root & Tools (Windows Only):
+   * http://forum.xda-developers.com/showthread.php?t=2160490
+   * Windows Driver:
+     * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
+     * Open Windows Explorer to CD-ROM
+     * Install LenovoUsbDriver_autorun_1.0.8.exe
  * Update .ZIP:  
    Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
    * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
