@@ -9,10 +9,19 @@
     * Software: http://mtk2000.ucoz.ru/load/soft/4
   * MTK Droid Root & Tools (MDRT) (Windows Only):
     * http://forum.xda-developers.com/showthread.php?t=2160490
-    * Windows Driver:
-      * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
-      * Open Windows Explorer to CD-ROM
-      * Install LenovoUsbDriver_autorun_1.0.8.exe
+    * Windows USB Driver:
+      * Standard:
+        * On Device:
+          * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
+          * Open Windows Explorer to CD-ROM
+          * Install LenovoUsbDriver_autorun_1.0.8.exe
+        * Download:  
+          http://lenovo-forums.ru/topic/3057-%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D0%B0-lenovo-yoga-tablet/
+          * Direct: http://lenovo-forums.ru/index.php?app=core&module=attach&section=attach&attach_id=7097
+      * USB VCOM Driver (for [below] SmartPhone Flash Tool):
+        * Download:  
+          http://lenovo-forums.ru/topic/3057-%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D0%B0-lenovo-yoga-tablet/
+          * Direct: http://lenovo-forums.ru/index.php?app=core&module=attach&section=attach&attach_id=7098
     * Tutorials:
       * How To Root: http://forum.xda-developers.com/showpost.php?p=38337401&postcount=5
       * Problem Solving: http://forum.xda-developers.com/showpost.php?p=38369102&postcount=11
@@ -26,7 +35,8 @@
 * Update .ZIP:  
   Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
   * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
-  * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
+  * Direct:  
+    http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
 * Processor: MediaTek MT8125 (or MT8389) 1.2GHz Quad-Core
   * NOTE: MediaTek packs their boot.img and recovery.img a little differently.  
     Specifically the *-ramdisk.gz files have a 512 byte header that needs to be removed.  
@@ -43,14 +53,21 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 </pre>
   * The first 512 bytes of the kernel files might also need to be removed.
 * Devices with the same processor (* = unconfirmed):
-  * Lenovo Yoga B8000 (10")
-  * Lenovo Yoga B6000 (8")
-  * Lenovo S6000
+  * Lenovo Yoga 10" (b8000)  
+    http://shop.lenovo.com/us/en/tablets/ideatab/yoga/yoga-10/#techspecs
+  * Lenovo Yoga 8" (b6000)
+    http://shop.lenovo.com/us/en/tablets/ideatab/yoga/yoga-8/#techspecs
+  * Lenovo S6000  
+    http://shop.lenovo.com/us/en/tablets/ideatab/s-series/s6000/#techspecs
   * Lenovo S5000
-  * Lenovo A3000
+    http://shop.lenovo.com/us/en/tablets/ideatab/s-series/s5000#techspecs
+  * Lenovo A3000  
+    http://shop.lenovo.com/us/en/tablets/ideatab/a-series/a3000/#techspecs
   * Lenovo A2107A
-  * Asus MemoPad HD7
-  * GoClever Aries 785 (MT8389)
+  * ASUS MeMO Pad HD 7  
+    http://www.asus.com/us/Tablets_Mobile/ASUS_MeMO_Pad_HD_7#specifications
+  * GoClever Aries 785 (MT8389)  
+    http://www.goclever.com/uk/products,c1/tablet,c5/aries-785,a149.html#specification
 
 ## Work in progress... ##
  1. Install 64-bit Ubuntu on a VM (4GB RAM, 64GB Disk)
