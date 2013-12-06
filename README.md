@@ -91,23 +91,31 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
  1. Wait several hours!
  1. Customize mkvendor.sh for MediaTek CPU:
    1. gedit build/tools/device/mkvendor.sh
-   1. Change:  
-      BOOTIMAGE=$3  
-      -to-  
-      BOOTIMAGE=$3  
-      SKIP=$4  
-   1. Change:  
-      pushd ramdisk > /dev/null  
-      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i  
-      -to-  
-      pushd ramdisk > /dev/null  
-      if [ ! -z "$SKIP" ]  
-      then  
-        # Definitely discard the first $SKIP bytes  
-        mv ../$BOOTIMAGEFILE-ramdisk.gz ../$BOOTIMAGEFILE-ramdisk-raw.gz  
-        dd bs=$SKIP skip=1 if=../$BOOTIMAGEFILE-ramdisk-raw.gz of=../$BOOTIMAGEFILE-ramdisk.gz  
-      fi  
-      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
+   1. Change:
+<pre>
+BOOTIMAGE=$3
+</pre>
+      -to-
+<pre>
+BOOTIMAGE=$3
+SKIP=$4
+</pre>
+   1. Change:
+<pre>
+pushd ramdisk > /dev/null
+gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
+</pre>
+      -to-
+<pre>
+pushd ramdisk > /dev/null
+if [ ! -z "$SKIP" ]
+then
+  # Definitely discard the first $SKIP bytes
+  mv ../$BOOTIMAGEFILE-ramdisk.gz ../$BOOTIMAGEFILE-ramdisk-raw.gz
+  dd bs=$SKIP skip=1 if=../$BOOTIMAGEFILE-ramdisk-raw.gz of=../$BOOTIMAGEFILE-ramdisk.gz
+fi
+gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
+</pre>
  1. adb pull /system/build.prop
 <pre>
 ro.product.manufacturer=LENOVO
