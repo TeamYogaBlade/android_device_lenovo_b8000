@@ -9,10 +9,19 @@
     * Software: http://mtk2000.ucoz.ru/load/soft/4
   * MTK Droid Root & Tools (MDRT) (Windows Only):
     * http://forum.xda-developers.com/showthread.php?t=2160490
-    * Windows Driver:
-      * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
-      * Open Windows Explorer to CD-ROM
-      * Install LenovoUsbDriver_autorun_1.0.8.exe
+    * Windows USB Driver:
+      * Standard:
+        * On Device:
+          * On Stock ROM, Settings->Storage->Connect As CD-ROM->Built-in CD-ROM
+          * Open Windows Explorer to CD-ROM
+          * Install LenovoUsbDriver_autorun_1.0.8.exe
+        * Download:  
+          http://lenovo-forums.ru/topic/3057-%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D0%B0-lenovo-yoga-tablet/
+          * Direct: http://lenovo-forums.ru/index.php?app=core&module=attach&section=attach&attach_id=7097
+      * USB VCOM Driver (for [below] SmartPhone Flash Tool):
+        * Download:  
+          http://lenovo-forums.ru/topic/3057-%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D0%B0-lenovo-yoga-tablet/
+          * Direct: http://lenovo-forums.ru/index.php?app=core&module=attach&section=attach&attach_id=7098
     * Tutorials:
       * How To Root: http://forum.xda-developers.com/showpost.php?p=38337401&postcount=5
       * Problem Solving: http://forum.xda-developers.com/showpost.php?p=38369102&postcount=11
