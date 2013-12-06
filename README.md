@@ -43,14 +43,21 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 </pre>
   * The first 512 bytes of the kernel files might also need to be removed.
 * Devices with the same processor (* = unconfirmed):
-  * Lenovo Yoga B8000 (10")
-  * Lenovo Yoga B6000 (8")
-  * Lenovo S6000
+  * Lenovo Yoga 10" (b8000)  
+    http://shop.lenovo.com/us/en/tablets/ideatab/yoga/yoga-10/#techspecs
+  * Lenovo Yoga 8" (b6000)
+    http://shop.lenovo.com/us/en/tablets/ideatab/yoga/yoga-8/#techspecs
+  * Lenovo S6000  
+    http://shop.lenovo.com/us/en/tablets/ideatab/s-series/s6000/#techspecs
   * Lenovo S5000
-  * Lenovo A3000
+    http://shop.lenovo.com/us/en/tablets/ideatab/s-series/s5000#techspecs
+  * Lenovo A3000  
+    http://shop.lenovo.com/us/en/tablets/ideatab/a-series/a3000/#techspecs
   * Lenovo A2107A
-  * Asus MemoPad HD7
-  * GoClever Aries 785 (MT8389)
+  * ASUS MeMO Pad HD 7  
+    http://www.asus.com/us/Tablets_Mobile/ASUS_MeMO_Pad_HD_7#specifications
+  * GoClever Aries 785 (MT8389)  
+    http://www.goclever.com/uk/products,c1/tablet,c5/aries-785,a149.html#specification
 
 ## Work in progress... ##
  1. Install 64-bit Ubuntu on a VM (4GB RAM, 64GB Disk)
