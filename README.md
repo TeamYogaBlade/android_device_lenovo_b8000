@@ -148,7 +148,7 @@ Lenovo Yoga 8/10 Tablet Open Source Code:
       * build
       * config
       * custom
-      * kernel
+      * kernel - "intended for Mediatek solution kernel specific non-customization codes"
       * platform
   * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip
     * kernel
