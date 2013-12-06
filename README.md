@@ -133,24 +133,20 @@ Other References:
    * http://forum.xda-developers.com/showthread.php?t=1587411
 
 Lenovo Yoga 8/10 Tablet Open Source Code:
- * http://mobilesupport.lenovo.com/en-us/products/yoga_tablet_10
-   * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part1.zip
-   * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip
-   * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part3.zip
-
-Weird packaging:
-   * part1
-     * mediatek
-       * build
-       * config
-       * custom
-       * kernel
-       * platform
-   * part2
-     * kernel
-   * part3
-     * bionic
-     * bootable
-     * external
+* http://mobilesupport.lenovo.com/en-us/products/yoga_tablet_10?tabname=downloads  
+  Weird packaging:
+  * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part1.zip
+    * mediatek
+      * build
+      * config
+      * custom
+      * kernel
+      * platform
+  * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part2.zip
+    * kernel
+  * http://download.lenovo.com/consumer/open_source_code/b6000-8000_source_part3.zip
+    * bionic
+    * bootable
+    * external
 
 
