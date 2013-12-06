@@ -27,12 +27,6 @@
   Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
   * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
   * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
-  * adb pull /system/build.prop
-<pre>
-        ro.product.manufacturer=LENOVO
-        ro.product.device=B8000
-        ro.product.board=blade10_row_wifi
-</pre>
 * Processor: MediaTek MT8125 (or MT8389) 1.2GHz Quad-Core
   * NOTE: MediaTek packs their boot.img and recovery.img a little differently.  
     Specifically the *-ramdisk.gz files have a 512 byte header that needs to be removed.  
@@ -113,9 +107,15 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
         mv ../$BOOTIMAGEFILE-ramdisk.gz ../$BOOTIMAGEFILE-ramdisk-raw.gz  
         dd bs=$SKIP skip=1 if=../$BOOTIMAGEFILE-ramdisk-raw.gz of=../$BOOTIMAGEFILE-ramdisk.gz  
       fi  
-      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i  
+      gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
+   1. adb pull /system/build.prop
+<pre>
+ro.product.manufacturer=LENOVO
+ro.product.device=B8000
+ro.product.board=blade10_row_wifi
+</pre>
    1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
-
+ 1. ...
 
 Other References:
  * Using my old Galaxy Epic and LGOG as a guide:
