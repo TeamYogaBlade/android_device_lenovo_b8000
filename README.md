@@ -89,7 +89,7 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
  1. Wait several hours!
  1. make -j4 otatools
  1. Wait several hours!
- 1. mkvendor (customized for MediaTek CPU)
+ 1. Customize mkvendor.sh for MediaTek CPU:
    1. gedit build/tools/device/mkvendor.sh
    1. Change:  
       BOOTIMAGE=$3  
@@ -108,13 +108,13 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
         dd bs=$SKIP skip=1 if=../$BOOTIMAGEFILE-ramdisk-raw.gz of=../$BOOTIMAGEFILE-ramdisk.gz  
       fi  
       gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
-   1. adb pull /system/build.prop
+ 1. adb pull /system/build.prop
 <pre>
 ro.product.manufacturer=LENOVO
 ro.product.device=B8000
 ro.product.board=blade10_row_wifi
 </pre>
-   1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
+ 1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
  1. ...
 
 Other References:
