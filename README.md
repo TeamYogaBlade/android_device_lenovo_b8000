@@ -26,7 +26,8 @@
 * Update .ZIP:  
   Yoga_tablet_10_A422_000_040_131023_WW_WIFI.rar:  
   * http://lenovo-forums.ru/topic/3182-rom-yoga-10-a422-000-040-131023-ww-wifi/
-  * Direct: http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
+  * Direct:  
+    http://lenovo-forums.ru/files/go/baa7f9a098bab2c75e49be78eba416fb/rom-yoga-10-a422-000-040-131023-ww-wifiamp;agreed=1
 * Processor: MediaTek MT8125 (or MT8389) 1.2GHz Quad-Core
   * NOTE: MediaTek packs their boot.img and recovery.img a little differently.  
     Specifically the *-ramdisk.gz files have a 512 byte header that needs to be removed.  
