@@ -1,6 +1,3 @@
-[submodule "lenovo_b6000-8000_source"]
-	path = lenovo_b6000-8000_source
-	url = git@github.com:paulpv/lenovo_b6000-8000_source.git
 [submodule "lenovo_b8000_update"]
 	path = lenovo_b8000_update
 	url = git@github.com:paulpv/lenovo_b8000_update.git
