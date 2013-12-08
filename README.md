@@ -72,14 +72,15 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 ## Work in progress... ##
 1. Install 64-bit Ubuntu on a VM (4GB RAM, 64GB Disk)  
    http://wiki.cyanogenmod.org/w/Doc:_using_virtual_machines#Install_VirtualBox
-  1. Install VirtualBox & Extensions: https://www.virtualbox.org/wiki/Downloads
+  1. Download and Install VirtualBox + Extensions: https://www.virtualbox.org/wiki/Downloads
   1. Download the latest Ubuntu 64-bit: http://www.ubuntu.com/download/desktop
-  1. Create and install Ubuntu (recommend 4GB RAM and 32GB Disk)
-1. Install SmartGit client
+  1. Create and Install Ubuntu (recommend 2 CPU, 4GB RAM, 32GB Disk, 32MB Video)
 1. sudo apt-get update
-1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-6-jdk openjdk-6-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
+1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
 1. sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
 1. sudo apt-get install android-tools-adb android-tools-fastboot
+1. Install SmartGit client
+1. Install Chrome
 1. mkdir -p ~/bin
 1. curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 1. chmod a+x ~/bin/repo
@@ -87,7 +88,7 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 <pre>
 export USE_CCACHE=1
 export PS1="[\t] \u@\h> "
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
@@ -103,7 +104,7 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
   1. GitHub->SSH Keys->Add->Paste
   1. ssh -T git@github.com
 1. git config --global user.email "pv@swooby.com"
-1. git config --global user.name "Paul Peavyhouse"
+1. git config --global user.name "paulpv"
 1. mkdir -p ~/android/system
 1. cd ~/android/system/
 1. repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
