@@ -1,4 +1,4 @@
-# Lenovo Yoga IdeaPad B8000 (Tablet 10) #
+# Lenovo Yoga 10" (b8000) Tablet
 
 ## Device Info ##
 * Recovery/Fastboot:  
@@ -83,11 +83,12 @@ sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd
 sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
 sudo apt-get install android-tools-adb android-tools-fastboot
 </pre>
-1. Install SmartGit client
-1. Install Chrome
-1. mkdir -p ~/bin
-1. curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-1. chmod a+x ~/bin/repo
+1. Get the all important "repo" tool:
+<pre>
+mkdir -p ~/bin
+curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+</pre>
 1. gedit ~/.bashrc &
 <pre>
 export USE_CCACHE=1
