@@ -75,6 +75,7 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
   1. Download and Install VirtualBox + Extensions: https://www.virtualbox.org/wiki/Downloads
   1. Download the latest Ubuntu 64-bit: http://www.ubuntu.com/download/desktop
   1. Create and Install Ubuntu (recommend 2 CPU, 4GB RAM, 32GB Disk, 32MB Video)
+  1. Install VirtualBox Guest Additions on VM
 1. sudo apt-get update
 1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
 1. sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
