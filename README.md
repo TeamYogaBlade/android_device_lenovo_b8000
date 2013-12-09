@@ -128,7 +128,7 @@ BOOTIMAGE=$3
 BOOTIMAGE=$3
 SKIP=$4
 </pre>
-    1. Change:
+      Change:
 <pre>
 pushd ramdisk > /dev/null
 gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
@@ -144,13 +144,13 @@ then
 fi
 gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
 </pre>
-    1. adb pull /system/build.prop
+      1. adb pull /system/build.prop
 <pre>
 ro.product.manufacturer=LENOVO
 ro.product.device=B8000
 ro.product.board=blade10_row_wifi
 </pre>
-    1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
+      1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
   * Contributor:
     1. git clone git@github.com:TeamYogaBlade/android_device_lenovo_b8000.git device/lenovo/b8000
     1. [cd device/lenovo/b8000]
