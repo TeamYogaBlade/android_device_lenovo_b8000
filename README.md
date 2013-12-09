@@ -117,24 +117,23 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
 1. make -j4 otatools
 1. Wait several hours!
 1. Get/Create android_device_lenovo_b8000 repo:
-  * Creator:
-    1. Customize mkvendor.sh for MediaTek CPU:
-      1. gedit build/tools/device/mkvendor.sh
-      1. Change:
+  * Creator: Customize mkvendor.sh for MediaTek CPU
+    1. gedit build/tools/device/mkvendor.sh
+    1. Change:
 <pre>
 BOOTIMAGE=$3
 </pre>
-         -to-
+       -to-
 <pre>
 BOOTIMAGE=$3
 SKIP=$4
 </pre>
-      1. Change:
+    1. Change:
 <pre>
 pushd ramdisk > /dev/null
 gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
 </pre>
-         -to-
+       -to-
 <pre>
 pushd ramdisk > /dev/null
 if [ ! -z "$SKIP" ]
