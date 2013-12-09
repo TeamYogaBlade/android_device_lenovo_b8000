@@ -124,7 +124,7 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
 <pre>
 BOOTIMAGE=$3
 </pre>
-      -to-
+         -to-
 <pre>
 BOOTIMAGE=$3
 SKIP=$4
@@ -134,7 +134,7 @@ SKIP=$4
 pushd ramdisk > /dev/null
 gunzip -c ../$BOOTIMAGEFILE-ramdisk.gz | cpio -i
 </pre>
-      -to-
+         -to-
 <pre>
 pushd ramdisk > /dev/null
 if [ ! -z "$SKIP" ]
