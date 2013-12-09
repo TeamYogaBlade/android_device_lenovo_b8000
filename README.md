@@ -83,6 +83,22 @@ sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd
 sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
 sudo apt-get install android-tools-adb android-tools-fastboot
 </pre>
+1. Set up Git/GitHub:
+  1. Set up GitHub SSH keys: https://help.github.com/articles/generating-ssh-keys
+<pre>
+ssh-keygen -t rsa -C "pv@swooby.com"
+cd ~/.ssh
+ssh-add id_rsa
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+</pre>
+    1. GitHub->SSH Keys->Add->Paste
+    1. Test that everything is set up:
+<pre>
+ssh -T git@github.com
+</pre>
+  1. git config --global user.email "pv@swooby.com"
+  1. git config --global user.name "paulpv"
 1. Get the all important "repo" tool:
 <pre>
 mkdir -p ~/bin
@@ -99,21 +115,6 @@ export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
 </pre>
 1. Close the current Terminal and open a new Terminal
-1. Set up GitHub SSH keys: https://help.github.com/articles/generating-ssh-keys
-<pre>
-ssh-keygen -t rsa -C "pv@swooby.com"
-cd ~/.ssh
-ssh-add id_rsa
-sudo apt-get install xclip
-xclip -sel clip < ~/.ssh/id_rsa.pub
-</pre>
-  1. GitHub->SSH Keys->Add->Paste
-  1. Test that everything is set up:
-<pre>
-ssh -T git@github.com
-</pre>
-1. git config --global user.email "pv@swooby.com"
-1. git config --global user.name "paulpv"
 1. mkdir -p ~/android/system
 1. cd ~/android/system/
 1. repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
