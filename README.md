@@ -76,10 +76,13 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
   1. Download the latest Ubuntu 64-bit: http://www.ubuntu.com/download/desktop
   1. Create and Install Ubuntu (recommend 2 CPU, 4GB RAM, 32GB Disk, 32MB Video)
   1. Install VirtualBox Guest Additions on VM
-1. sudo apt-get update
-1. sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
-1. sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
-1. sudo apt-get install android-tools-adb android-tools-fastboot
+1. Install the necessary build tools:
+<pre>
+sudo apt-get update
+sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
+sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
+sudo apt-get install android-tools-adb android-tools-fastboot
+</pre>
 1. Install SmartGit client
 1. Install Chrome
 1. mkdir -p ~/bin
@@ -94,16 +97,20 @@ export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
 </pre>
-1. Close and open a new Terminal
-1. Set up GitHub SSH keys
-  1. https://help.github.com/articles/generating-ssh-keys
-  1. ssh-keygen -t rsa -C "pv@swooby.com"
-  1. cd ~/.ssh
-  1. ssh-add id_rsa
-  1. sudo apt-get install xclip
-  1. xclip -sel clip < ~/.ssh/id_rsa.pub
+1. Close the current Terminal and open a new Terminal
+1. Set up GitHub SSH keys: https://help.github.com/articles/generating-ssh-keys
+<pre>
+ssh-keygen -t rsa -C "pv@swooby.com"
+cd ~/.ssh
+ssh-add id_rsa
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+</pre>
   1. GitHub->SSH Keys->Add->Paste
-  1. ssh -T git@github.com
+  1. Test that everything is set up:
+<pre>
+ssh -T git@github.com
+</pre>
 1. git config --global user.email "pv@swooby.com"
 1. git config --global user.name "paulpv"
 1. mkdir -p ~/android/system
@@ -173,5 +180,6 @@ Other References:
   * http://forum.xda-developers.com/showthread.php?t=1587411
 
 ## TODO
+1. Create android_vendor_lenovo_b8000 and android_kernel_lenovo_b8000 repos
 1. Set up the b8000 version of http://wiki.cyanogenmod.org/w/Template:Device_build
 1. Set up a local manifest to pull from GitHub: http://wiki.cyanogenmod.org/w/Local_manifest
