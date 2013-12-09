@@ -163,3 +163,6 @@ Other References:
 * MediaTek specific ideas:
   * https://github.com/bgcngm/mtk-tools
   * http://forum.xda-developers.com/showthread.php?t=1587411
+
+## TODO
+1. Set up the b8000 version of http://wiki.cyanogenmod.org/w/Template:Device_build
