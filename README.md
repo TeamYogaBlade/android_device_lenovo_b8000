@@ -111,9 +111,9 @@ export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
 1. repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
 1. repo sync -j4
 1. Wait several hours!
-1. cd vendor/cm
+1. cd ~/android/system/vendor/cm
 1. ./get-prebuilts
-1. cd ../..
+1. cd ~/android/system/
 1. make -j4 otatools
 1. Wait several hours!
 1. Get/Create android_device_lenovo_b8000 repo:
@@ -154,6 +154,8 @@ ro.product.board=blade10_row_wifi
     1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
   * Contributor:
     1. git clone git@github.com:TeamYogaBlade/android_device_lenovo_b8000.git device/lenovo/b8000
+    1. [cd device/lenovo/b8000]
+    1. [git checkout cm-10.1]
 1. ...
 
 Other References:
