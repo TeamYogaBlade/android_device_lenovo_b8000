@@ -174,3 +174,4 @@ Other References:
 
 ## TODO
 1. Set up the b8000 version of http://wiki.cyanogenmod.org/w/Template:Device_build
+1. Set up a local manifest to pull from GitHub: http://wiki.cyanogenmod.org/w/Local_manifest
