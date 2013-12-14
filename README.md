@@ -182,8 +182,8 @@ Progress:
 make[2]: *** No rule to make target `mediatek/platform/mt6589/kernel/drivers/dual_ccci/asf/core/alg_aes_export.o', needed by `mediatek/platform/mt6589/kernel/drivers/dual_ccci/ccci_plat.o'.  Stop.
 </pre>
     * Some other references:
-      * https://github.com/oppo-source/R819-Kernel-Source-4.2/tree/master/mediatek/kernel/drivers/dual_ccci
-      * https://github.com/varunchitre15/MT6589_kernel_source/tree/master/mediatek/kernel/drivers/dual_ccci
+      * https://github.com/oppo-source/R819-Kernel-Source-4.2/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
+      * https://github.com/varunchitre15/MT6589_kernel_source/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
 
 Other References:
 * Using my old Galaxy Epic and LGOG as a guide:
