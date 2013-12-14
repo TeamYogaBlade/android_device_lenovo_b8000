@@ -52,6 +52,11 @@ dd bs=512 skip=1 if=../recovery.img-ramdisk-raw.gz of=../recovery.img-ramdisk.gz
 gunzip -c ../recovery.img-ramdisk.gz | cpio -i
 </pre>
   * The first 512 bytes of the kernel files might also need to be removed.
+  * The b8000/b6000 kernel code seems to be based off of the MT6589 CPU:  
+    Examples:
+    * https://github.com/TeamYogaBlade/lenovo_b6000-8000_source/tree/master/mediatek/config/mt6589
+    * https://github.com/TeamYogaBlade/lenovo_b6000-8000_source/tree/master/mediatek/custom/mt6589
+    * https://github.com/TeamYogaBlade/lenovo_b6000-8000_source/tree/master/mediatek/platform/mt6589
 * Devices with the same processor (* = unconfirmed):
   * Lenovo Yoga 10" (b8000)  
     http://shop.lenovo.com/us/en/tablets/ideatab/yoga/yoga-10/#techspecs
