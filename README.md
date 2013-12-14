@@ -171,6 +171,20 @@ ro.product.board=blade10_row_wifi
     1. [git checkout cm-10.1]
 1. ...
 
+Progress:
+* I am having a hard time compiling the following kernel elements:
+  1. mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/usb/
+<pre>
+/bin/sh: 1: [: mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/usb/: unexpected operator
+</pre>
+  1. mediatek/platform/mt6589/kernel/drivers/dual_ccci
+<pre>
+make[2]: *** No rule to make target `mediatek/platform/mt6589/kernel/drivers/dual_ccci/asf/core/alg_aes_export.o', needed by `mediatek/platform/mt6589/kernel/drivers/dual_ccci/ccci_plat.o'.  Stop.
+</pre>
+    * Some other references:
+      * https://github.com/oppo-source/R819-Kernel-Source-4.2/tree/master/mediatek/kernel/drivers/dual_ccci
+      * https://github.com/varunchitre15/MT6589_kernel_source/tree/master/mediatek/kernel/drivers/dual_ccci
+
 Other References:
 * Using my old Galaxy Epic and LGOG as a guide:
   * http://wiki.cyanogenmod.org/w/Build_for_epicmt
