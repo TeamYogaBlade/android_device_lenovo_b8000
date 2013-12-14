@@ -173,6 +173,12 @@ ro.product.board=blade10_row_wifi
 
 Progress:
 * I am having a hard time compiling the following kernel elements:
+  1. kernel/mediatek/custom path not found
+     Fixed by making a symlink to ../mediatek/custom
+  1. kernel/mediatek/kernel path not found
+     Fixed by making a symlink to ../mediatek/kernel
+  1. kernel/mediatek/platform path not found
+     Fixed by making a symlink to ../mediatek/platform
   1. mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/usb/
 <pre>
 /bin/sh: 1: [: mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/usb/: unexpected operator
@@ -192,6 +198,7 @@ net/netfilter/xt_mark.c:16:37: fatal error: linux/netfilter/xt_mark.h: No such f
 compilation terminated.
 make[2]: *** [net/netfilter/xt_mark.o] Error 1
 </pre>
+     Fixed by commenting out (for now)
   1. net/netfilter/xt_connmark.o
 <pre>
 CC      net/netfilter/xt_connmark.o
@@ -199,8 +206,12 @@ net/netfilter/xt_connmark.c:29:41: fatal error: linux/netfilter/xt_connmark.h: N
 compilation terminated.
 make[2]: *** [net/netfilter/xt_connmark.o] Error 1
 </pre>
-  1. net/netfilter/xt_HT.o
-
+     Fixed by commenting out (for now)
+  1. net/netfilter/xt_HL.o
+<pre>
+make[2]: *** No rule to make target `net/netfilter/xt_HL.o', needed by `net/netfilter/built-in.o'.  Stop.
+</pre>
+     Fixed by commenting out (for now)
 
 Other References:
 * Using my old Galaxy Epic and LGOG as a guide:
