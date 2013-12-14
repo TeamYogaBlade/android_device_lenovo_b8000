@@ -174,10 +174,25 @@ ro.product.board=blade10_row_wifi
 Progress:
 * I am having a hard time compiling the following kernel elements:
   1. kernel/mediatek/custom path not found
+<pre>
+scripts/Makefile.build:44: .../lenovo_b6000-8000_source/kernel/mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/Makefile: No such file or directory
+make[1]: *** No rule to make target `.../lenovo_b6000-8000_source/kernel/mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/Makefile'.  Stop.
+make: *** [mediatek/custom/out/lenovo89_tb_x10_jb2/kernel] Error 2
+</pre>
      Fixed by making a symlink to ../mediatek/custom
   1. kernel/mediatek/kernel path not found
+<pre>
+scripts/Makefile.build:44: .../lenovo_b6000-8000_source/kernel/mediatek/kernel/Makefile: No such file or directory
+make[1]: *** No rule to make target `.../lenovo_b6000-8000_source/kernel/mediatek/kernel/Makefile'.  Stop.
+make: *** [mediatek/kernel] Error 2
+</pre>
      Fixed by making a symlink to ../mediatek/kernel
   1. kernel/mediatek/platform path not found
+<pre>
+scripts/Makefile.build:44: .../lenovo_b6000-8000_source/kernel/mediatek/platform/mt6589/kernel/core/Makefile: No such file or directory
+make[1]: *** No rule to make target `.../lenovo_b6000-8000_source/kernel/mediatek/platform/mt6589/kernel/core/Makefile'.  Stop.
+make: *** [mediatek/platform/mt6589/kernel/core] Error 2
+</pre>
      Fixed by making a symlink to ../mediatek/platform
   1. mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/usb/
 <pre>
