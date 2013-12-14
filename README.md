@@ -181,9 +181,18 @@ Progress:
 <pre>
 make[2]: *** No rule to make target `mediatek/platform/mt6589/kernel/drivers/dual_ccci/asf/core/alg_aes_export.o', needed by `mediatek/platform/mt6589/kernel/drivers/dual_ccci/ccci_plat.o'.  Stop.
 </pre>
+     Fixed by making a symlink to ../masp/asf
     * Some other references:
       * https://github.com/oppo-source/R819-Kernel-Source-4.2/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
       * https://github.com/varunchitre15/MT6589_kernel_source/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
+  1. net/netfilter/xt_mark.o
+<pre>
+CC      net/netfilter/xt_mark.o
+net/netfilter/xt_mark.c:16:37: fatal error: linux/netfilter/xt_mark.h: No such file or directory
+compilation terminated.
+make[2]: *** [net/netfilter/xt_mark.o] Error 1
+</pre>
+
 
 Other References:
 * Using my old Galaxy Epic and LGOG as a guide:
