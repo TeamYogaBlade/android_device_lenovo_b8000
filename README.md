@@ -192,6 +192,14 @@ net/netfilter/xt_mark.c:16:37: fatal error: linux/netfilter/xt_mark.h: No such f
 compilation terminated.
 make[2]: *** [net/netfilter/xt_mark.o] Error 1
 </pre>
+  1. net/netfilter/xt_connmark.o
+<pre>
+CC      net/netfilter/xt_connmark.o
+net/netfilter/xt_connmark.c:29:41: fatal error: linux/netfilter/xt_connmark.h: No such file or directory
+compilation terminated.
+make[2]: *** [net/netfilter/xt_connmark.o] Error 1
+</pre>
+  1. net/netfilter/xt_HT.o
 
 
 Other References:
