@@ -216,6 +216,7 @@ Other References:
   * https://github.com/oppo-source/R819-Kernel-Source-4.2/tree/master/
   * https://github.com/varunchitre15/MT6589_kernel_source/tree/master/
   * https://github.com/Shr3ps/kernel_acer_a1-810_MT8125
+  * https://github.com/torvalds/linux
 
 ## TODO
 1. Create android_vendor_lenovo_b8000 and android_kernel_lenovo_b8000 repos
