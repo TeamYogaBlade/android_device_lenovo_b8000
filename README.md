@@ -173,39 +173,10 @@ ro.product.board=blade10_row_wifi
 
 Progress:
 * I am having a hard time compiling the following kernel elements:
-  1. kernel/mediatek/custom path not found
-<pre>
-scripts/Makefile.build:44: .../lenovo_b6000-8000_source/kernel/mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/Makefile: No such file or directory
-make[1]: *** No rule to make target `.../lenovo_b6000-8000_source/kernel/mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/Makefile'.  Stop.
-make: *** [mediatek/custom/out/lenovo89_tb_x10_jb2/kernel] Error 2
-</pre>
-     Fixed by making a symlink to ../mediatek/custom
-  1. kernel/mediatek/kernel path not found
-<pre>
-scripts/Makefile.build:44: .../lenovo_b6000-8000_source/kernel/mediatek/kernel/Makefile: No such file or directory
-make[1]: *** No rule to make target `.../lenovo_b6000-8000_source/kernel/mediatek/kernel/Makefile'.  Stop.
-make: *** [mediatek/kernel] Error 2
-</pre>
-     Fixed by making a symlink to ../mediatek/kernel
-  1. kernel/mediatek/platform path not found
-<pre>
-scripts/Makefile.build:44: .../lenovo_b6000-8000_source/kernel/mediatek/platform/mt6589/kernel/core/Makefile: No such file or directory
-make[1]: *** No rule to make target `.../lenovo_b6000-8000_source/kernel/mediatek/platform/mt6589/kernel/core/Makefile'.  Stop.
-make: *** [mediatek/platform/mt6589/kernel/core] Error 2
-</pre>
-     Fixed by making a symlink to ../mediatek/platform
   1. mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/usb/
 <pre>
 /bin/sh: 1: [: mediatek/custom/out/lenovo89_tb_x10_jb2/kernel/usb/: unexpected operator
 </pre>
-  1. mediatek/platform/mt6589/kernel/drivers/dual_ccci
-<pre>
-make[2]: *** No rule to make target `mediatek/platform/mt6589/kernel/drivers/dual_ccci/asf/core/alg_aes_export.o', needed by `mediatek/platform/mt6589/kernel/drivers/dual_ccci/ccci_plat.o'.  Stop.
-</pre>
-     Fixed by making a symlink to ../masp/asf
-    * Some other references:
-      * https://github.com/oppo-source/R819-Kernel-Source-4.2/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
-      * https://github.com/varunchitre15/MT6589_kernel_source/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
   1. net/netfilter/xt_mark.o
 <pre>
 CC      net/netfilter/xt_mark.o
@@ -242,6 +213,9 @@ Other References:
 * MediaTek specific ideas:
   * https://github.com/bgcngm/mtk-tools
   * http://forum.xda-developers.com/showthread.php?t=1587411
+  * Some other references:
+    * https://github.com/oppo-source/R819-Kernel-Source-4.2/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
+    * https://github.com/varunchitre15/MT6589_kernel_source/tree/master/mediatek/platform/mt6589/kernel/drivers/dual_ccci
 
 ## TODO
 1. Create android_vendor_lenovo_b8000 and android_kernel_lenovo_b8000 repos
