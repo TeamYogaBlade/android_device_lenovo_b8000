@@ -219,6 +219,6 @@ Other References:
   * https://github.com/torvalds/linux
 
 ## TODO
-1. Create android_vendor_lenovo_b8000 and android_kernel_lenovo_b8000 repos
+1. Determine if we need an android_vendor_lenovo_b8000 repo; if so then create it
 1. Set up the b8000 version of http://wiki.cyanogenmod.org/w/Template:Device_build
 1. Set up a local manifest to pull from GitHub: http://wiki.cyanogenmod.org/w/Local_manifest
