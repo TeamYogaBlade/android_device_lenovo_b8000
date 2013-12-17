@@ -220,5 +220,6 @@ Other References:
 
 ## TODO
 1. Determine if we need an android_vendor_lenovo_b8000 repo; if so then create it
-1. Set up the b8000 version of http://wiki.cyanogenmod.org/w/Template:Device_build
+1. Set up the b8000 version of http://wiki.cyanogenmod.org/w/Template:Device_build  
+   http://wiki.cyanogenmod.org/w/Documentation#Using_the_Device_Template
 1. Set up a local manifest to pull from GitHub: http://wiki.cyanogenmod.org/w/Local_manifest
