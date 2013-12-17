@@ -1,6 +1,0 @@
-[submodule "lenovo_b8000_update"]
-	path = lenovo_b8000_update
-	url=git@github.com:TeamYogaBlade/lenovo_b8000_update.git
-[submodule "lenovo_b6000-8000_source"]
-	path = lenovo_b6000-8000_source
-	url = git@github.com:TeamYogaBlade/lenovo_b6000-8000_source.git
