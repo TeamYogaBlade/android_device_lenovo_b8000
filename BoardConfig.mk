@@ -3,6 +3,11 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/lenovo/b8000/BoardConfigVendor.mk
 
+# Try to build the kernel
+#TARGET_KERNEL_CONFIG := cyanogenmod_mydevice_defconfig
+# Keep this as a fallback
+TARGET_PREBUILT_KERNEL := device/lenovo/b8000/kernel
+
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := unknown
