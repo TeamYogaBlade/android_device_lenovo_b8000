@@ -120,15 +120,21 @@ export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$HOME/android/system/out/host/linux-x86/bin
 </pre>
 1. Close the current Terminal and open a new Terminal
-1. mkdir -p ~/android/system
-1. cd ~/android/system/
-1. repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
-1. repo sync -j4
+1. Get the source code:
+<pre>
+mkdir -p ~/android/system
+cd ~/android/system/
+repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+repo sync -j4
+</pre>
 1. Wait several hours!
-1. cd ~/android/system/vendor/cm
-1. ./get-prebuilts
-1. cd ~/android/system/
-1. make -j4 otatools
+1. Prepare the build environment
+<pre>
+cd ~/android/system/vendor/cm
+./get-prebuilts
+cd ~/android/system/
+make -j4 otatools
+</pre>
 1. Wait several hours!
 1. Get/Create android_device_lenovo_b8000 repo:
   * Creator: Customize mkvendor.sh for MediaTek CPU
@@ -165,11 +171,28 @@ ro.product.device=B8000
 ro.product.board=blade10_row_wifi
 </pre>
       1. build/tools/device/mkvendor.sh lenovo b8000 recovery.img 512
-  * Contributor:
-    1. git clone git@github.com:TeamYogaBlade/android_device_lenovo_b8000.git device/lenovo/b8000
-    1. [cd device/lenovo/b8000]
-    1. [git checkout cm-10.1]
-1. ...
+  * Contributor: Create a local manifest for the unofficial b8000 code
+    1. gedit ~/android/system/.repo/local_manifests/lenovo_b8000.xml
+
+```` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/lenovo/b8000" name="TeamYogaBlade/android_device_lenovo_b8000" remote="github" revision="master"/>
+    <project path="kernel/lenovo/b8000" name="TeamYogaBlade/android_kernel_lenovo_b8000" remote="github" revision="master"/>
+    <project path="kernel/lenovo/b8000/kernel_source" name="TeamYogaBlade/lenovo_b6000-8000_kernel_source" remote="github" revision="master"/>
+</manifest>
+````
+
+1. Set up your CM device:
+<pre>
+. build/envsetup.sh
+lunch
+</pre>
+1. Select "device_b8000"
+1. Build a recovery image
+<pre>
+make recoveryimage
+</pre>
 
 Progress:
 * I am having a hard time compiling the following kernel elements:
