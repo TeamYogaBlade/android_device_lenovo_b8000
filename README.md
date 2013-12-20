@@ -94,14 +94,21 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
   1. Create and Install Ubuntu (recommend 2 CPU, 4GB RAM, 100GB Disk, 32MB Video)
   1. Install VirtualBox Guest Additions on VM
 1. Follow http://source.android.com/source/initializing.html#installing-the-jdk
-1. Follow http://source.android.com/source/initializing.html#installing-required-packages-ubuntu-1204
-1. Install the necessary build tools:
 <pre>
 sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
 sudo apt-get update
 sudo apt-get install sun-java6-jdk
-sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
-sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
+</pre>
+1. Follow http://source.android.com/source/initializing.html#installing-required-packages-ubuntu-1204
+1. Follow anything else that is relevant in http://source.android.com/source/initializing.html
+1. Install the necessary build tools:
+<pre>
+sudo apt-get install git gnupg flex bison gperf build-essential \
+  zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
+  libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
+  libgl1-mesa-dev g++-multilib mingw32 tofrodos \
+  python-markdown libxml2-utils xsltproc zlib1g-dev:i386
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
 sudo apt-get install android-tools-adb android-tools-fastboot
 </pre>
 1. Set up Git/GitHub:
