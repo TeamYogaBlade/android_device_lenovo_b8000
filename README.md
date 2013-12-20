@@ -74,13 +74,27 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
   * GoClever Aries 785 (MT8389)  
     http://www.goclever.com/uk/products,c1/tablet,c5/aries-785,a149.html#specification
 
-## Work in progress... ##
-1. Install 64-bit Ubuntu on a VM (4GB RAM, 64GB Disk)  
+## References
+* Android Generic:
+  * http://source.android.com/source/building.html
+  * http://source.android.com/source/initializing.html
+* CyanogenMod Specific:
+  * http://wiki.cyanogenmod.org/w/Doc:_using_virtual_machines
+
+## Notes
+1. Apparently using "the latest" version of any 3rd party tool in the build process is a bad thing.  
+   ex: Using Ubuntu 13.x w/ OpenJDK7  
+   You are asking for trouble if you use versions of the tools that are not mentioned!
+
+## Setup (work in progress...)
+1. Install 64-bit Ubuntu 12.04 on a VM (4GB RAM, 64GB Disk)  
    http://wiki.cyanogenmod.org/w/Doc:_using_virtual_machines#Install_VirtualBox
   1. Download and Install VirtualBox + Extensions: https://www.virtualbox.org/wiki/Downloads
-  1. Download the latest Ubuntu 64-bit: http://www.ubuntu.com/download/desktop
-  1. Create and Install Ubuntu (recommend 2 CPU, 4GB RAM, 32GB Disk, 32MB Video)
+  1. Download the Ubuntu 12.04 64-bit: http://releases.ubuntu.com/precise/ubuntu-12.04.3-desktop-amd64.iso
+  1. Create and Install Ubuntu (recommend 2 CPU, 4GB RAM, 100GB Disk, 32MB Video)
   1. Install VirtualBox Guest Additions on VM
+1. Follow http://source.android.com/source/initializing.html#installing-the-jdk
+1. Follow http://source.android.com/source/initializing.html#installing-required-packages-ubuntu-1204
 1. Install the necessary build tools:
 <pre>
 sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
