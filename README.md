@@ -83,8 +83,10 @@ gunzip -c ../recovery.img-ramdisk.gz | cpio -i
   1. Install VirtualBox Guest Additions on VM
 1. Install the necessary build tools:
 <pre>
+sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
 sudo apt-get update
-sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
+sudo apt-get install sun-java6-jdk
+sudo apt-get install bison build-essential curl flex git-core gnupg gperf libesd0-dev libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev
 sudo apt-get install g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-gplv2-dev lib32z1-dev
 sudo apt-get install android-tools-adb android-tools-fastboot
 </pre>
