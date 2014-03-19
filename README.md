@@ -1,5 +1,8 @@
 # Lenovo Yoga 10" (b8000) Tablet
 
+EXPERIMENTAL AND NOT YET WORKING!  
+USE AT YOUR OWN RISK!
+
 ## Device Info ##
 * Recovery/Fastboot:  
   Hold down both Volume-Up and Volume-Down while turning the power on
